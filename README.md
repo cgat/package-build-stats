@@ -1,27 +1,39 @@
+## Fork
+
+This is a fork of [package-build-stats](https://github.com/pastelsky/package-build-stats) that adds support for building stats locally. When this [PR](https://github.com/pastelsky/package-build-stats/pull/16) (hopefully) is merged, this repo will no longer be needed.
+
   <img src="https://img.shields.io/npm/v/package-build-stats.svg" /> 
   <img src="https://img.shields.io/npm/l/package-build-stats.svg" 
   
-  This is the function that powers the core of building, minifying and gzipping of packages in bundlephobia.
+This is the function that powers the core of building, minifying and gzipping of packages in bundlephobia.
 
-## Usage
+## Installation
+
+`npm i package-build-stats-local`
+
+## Usage (Fork)
+
 ```js
-const getBuiltPackageStats = require('package-build-stats');
+const getBuiltPackageStats = require('package-build-stats-local')
 
-getBuiltPackageStats('packageName|pathToLocalPackage', { options })
-    .then((result) => console.log(result))
+getBuiltPackageStats('packageName|pathToLocalPackage', {
+  options,
+}).then(result => console.log(result))
 ```
 
 ## Options
 
-| Option  | Values | Description |
-|---|---|---|
-|  client | `'npm' or 'yarn'` | Which client to use to install package for building |
-| limitConcurrency  | `true` or `false`  |  When using `yarn` as the client, use the network mutex to limit concurrency |
-|  networkConcurrency |  `number` |  When using `yarn` as client, limit simultaneous installs to this number. |
-| customImports | `Array<string>` | By default, the default export is used for calculating sizes. Setting this option allows calculation of package stats based on more granular top-level exports.
+| Option             | Values            | Description                                                                                                                                                     |
+| ------------------ | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| client             | `'npm' or 'yarn'` | Which client to use to install package for building                                                                                                             |
+| limitConcurrency   | `true` or `false` | When using `yarn` as the client, use the network mutex to limit concurrency                                                                                     |
+| networkConcurrency | `number`          | When using `yarn` as client, limit simultaneous installs to this number.                                                                                        |
+| customImports      | `Array<string>`   | By default, the default export is used for calculating sizes. Setting this option allows calculation of package stats based on more granular top-level exports. |
 
 ## Testing results using in-built server in development
+
 ### Commands
+
 To start an local server that builds packages, run -
 
 ```bash
@@ -31,7 +43,8 @@ yarn run start
 The server runs at port `3000`.
 
 ### Making requests
-To build a package and get it's stats, run a curl request like so - 
+
+To build a package and get it's stats, run a curl request like so -
 
 ```bash
 curl 'localhost:3000/size?p=<package-name>'
@@ -44,6 +57,6 @@ curl 'localhost:3000/size?p=react'
 ```
 
 ## Contributing
+
 Clone the repo, npm install, and run the server.
 The file you're probably looking for is `getPackageStats.js`
-

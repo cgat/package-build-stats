@@ -1,8 +1,8 @@
 {
-  "name": "package-build-stats",
-  "version": "6.1.0",
-  "author": "Shubham Kanodia <shubham.kanodia10@gmail.com>",
-  "repository": "https://github.com/pastelsky/package-build-stats",
+  "name": "package-build-stats-local",
+  "version": "6.2.0",
+  "author": "Chris Gat <chris.gat@gmail.com>",
+  "repository": "https://github.com/cgat/package-build-stats",
   "license": "MIT",
   "engines": {
     "node": ">=8.9.x",
