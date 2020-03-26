@@ -1,6 +1,9 @@
+
 ## Fork
 
-This is a fork of [package-build-stats](https://github.com/pastelsky/package-build-stats) that adds support for building stats locally. When this [PR](https://github.com/pastelsky/package-build-stats/pull/16) (hopefully) is merged, this repo will no longer be needed.
+~This is a fork of [package-build-stats](https://github.com/pastelsky/package-build-stats) that adds support for building stats locally. When this [PR](https://github.com/pastelsky/package-build-stats/pull/16) (hopefully) is merged, this repo will no longer be needed.~
+
+*The PR has been merged. Please use `package-build-stats` version  `>=6.2.0`.*
 
   <img src="https://img.shields.io/npm/v/package-build-stats.svg" /> 
   <img src="https://img.shields.io/npm/l/package-build-stats.svg" 
